@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Open+Sans&display=swap');
+html,
+body {
+  min-height: 100vh;
+  color: white;
+  font-family: 'Acme', sans-serif;
+}
+
+html,
+body,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #131516;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

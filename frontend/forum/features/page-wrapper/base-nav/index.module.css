@@ -1,0 +1,11 @@
+.nav {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-element {
+    margin: 15px;
+}
+.nav-element:hover{
+    color: #52679c;
+}

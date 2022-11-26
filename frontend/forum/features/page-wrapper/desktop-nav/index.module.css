@@ -1,0 +1,24 @@
+.center,
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    margin-left: 10px;
+}
+
+.search-bar-container {
+    height: 50px;
+    flex: 1 1 auto;
+    display: flex;
+    max-width: 500px;
+}
+
+.icon-profile {
+    height: 60px;
+}
+.icon-profile:hover {
+    cursor: pointer;
+	filter: invert(40%) sepia(13%) saturate(1648%) hue-rotate(185deg) brightness(96%) contrast(91%);
+}

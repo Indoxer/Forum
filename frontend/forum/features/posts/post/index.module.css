@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #A7A7A7;
+    margin-bottom: 4px;
+}
+
+.title {
+    font-size: 21px;
+    color: #74B4FF;
+    margin-bottom: 8px;
+}
+
+.author-style {
+    color: #A5D4CC;
+}
+.content {
+    font-size: 15px;
+    color: #727272;
+    margin-bottom: 13px;
+}
+
+.tags-container {
+    display: flex;
+}
+.tag {
+    background-color: #27292a;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 5px;
+}
