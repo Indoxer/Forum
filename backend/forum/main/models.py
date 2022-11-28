@@ -19,6 +19,11 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
+    
+    @property
+    def answers_amount(self):
+        return self.answers.count()
+        
 
     def __str__(self):
         return self.title

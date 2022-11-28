@@ -36,8 +36,9 @@ class PostSerializer(serializers.ModelSerializer):
         read_only = (
             "created_at",
             "updated_at",
+            "answers_amount"
         )
-        fields = ("id", "title", "tags", "created_at", "updated_at", "author")
+        fields = ("id", "title", "tags", "created_at", "updated_at", "author", "answers_amount")
 
 
 class DetailPostSerializer(serializers.ModelSerializer):
@@ -49,8 +50,9 @@ class DetailPostSerializer(serializers.ModelSerializer):
         read_only = (
             "created_at",
             "updated_at",
+            "answers_amount",
         )
-        fields = ("id", "title", "body", "tags", "created_at", "updated_at", "author")
+        fields = ("id", "title", "body", "tags", "created_at", "updated_at", "author", "answers_amount")
 
 
 class CommentSerializer(serializers.ModelSerializer):
