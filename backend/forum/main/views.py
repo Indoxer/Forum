@@ -1,12 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
-from rest_framework import generics, viewsets, filters, permissions
+from rest_framework import viewsets, filters, permissions
 
 from .models import User, Post, Tag, Answer, LikeAnswer, Comment
 from .serializers import (
     UserSerializer,
-    DetailPostSerializer,
     PostSerializer,
     TagSerializer,
     AnswerSerializer,
@@ -62,18 +61,13 @@ class PostViewSet(viewsets.ModelViewSet):
     search_fields = ("title", "tags__name")
     ordering = "-created_at"
     permission_classes = (IsAuthorOrReadOnly, permissions.IsAuthenticatedOrReadOnly)
-
+    serializer_class = PostSerializer
+    
     def get_queryset(self):
         qs = super().get_queryset()
         qs = qs.select_related("author")
         qs = qs.prefetch_related("tags")
         return qs
-
-    def get_serializer_class(self):
-        if self.action == "list":
-            return PostSerializer
-        else:
-            return DetailPostSerializer
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)

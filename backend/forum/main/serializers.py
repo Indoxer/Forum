@@ -40,21 +40,6 @@ class PostSerializer(serializers.ModelSerializer):
         )
         fields = ("id", "title", "tags", "created_at", "updated_at", "author", "answers_amount")
 
-
-class DetailPostSerializer(serializers.ModelSerializer):
-    tags = TagSerializer(many=True)
-    author = UserSerializer(read_only=True)
-
-    class Meta:
-        model = Post
-        read_only = (
-            "created_at",
-            "updated_at",
-            "answers_amount",
-        )
-        fields = ("id", "title", "body", "tags", "created_at", "updated_at", "author", "answers_amount")
-
-
 class CommentSerializer(serializers.ModelSerializer):
     author = UserSerializer(read_only=True)
 
