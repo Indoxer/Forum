@@ -20,6 +20,10 @@
     margin-bottom: 8px;
 }
 
+.title:hover {
+    color: #2b81e2;
+}
+
 .author-style {
     color: #A5D4CC;
 }
@@ -38,4 +42,7 @@
     font-size: 14px;
     margin-right: 10px;
     padding: 5px;
+}
+.tag:hover {
+    color: gray;
 }

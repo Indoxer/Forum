@@ -1,0 +1,13 @@
+.container {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 30px;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+.mobile-container {
+    grid-template-columns: auto;
+}
